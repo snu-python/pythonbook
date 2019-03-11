@@ -111,7 +111,7 @@ class Time(SimpleTime):
         >>> t = Time(24, 10, 59)
         Traceback (most recent call last):
         ...
-        AssertionError: <hour>는 0-23 사이의 양의 정수여야 합니다.
+        AssertionError: <hour>는 0-23 사이의 정수여야 합니다.
 
         All the comparison operators are implemented (i.e., <, <=, >, >=),
         in addition to ==, !=
@@ -176,7 +176,7 @@ class Time(SimpleTime):
             >>> t = Time(1, -25, 57)
             Traceback (most recent call last):
             ...
-            AssertionError: <minute>은 0-59 사이의 양의 정수여야 합니다.
+            AssertionError: <minute>은 0-59 사이의 정수여야 합니다.
             >>> t = Time(1, 25, 57)
             >>> t.seconds       # now it is 'seconds', not 'seconds()
             5157
@@ -194,7 +194,7 @@ class Time(SimpleTime):
             >>> t = Time(24, 10, 13)
             Traceback (most recent call last):
             ...
-            AssertionError: <hour>는 0-23 사이의 양의 정수여야 합니다.
+            AssertionError: <hour>는 0-23 사이의 정수여야 합니다.
             >>> t = Time(23, 10, 13)
             >>> t
             Time<23:10:13>
@@ -206,7 +206,7 @@ class Time(SimpleTime):
         """Setter that validates whether 'hour' is  a proper representation,
         and stores hours in the private data attribute __hour.
         """
-        assert hour >= 0 and hour < 24, '<hour>는 0-23 사이의 양의 정수여야 합니다.'
+        assert hour >= 0 and hour < 24, '<hour>는 0-23 사이의 정수여야 합니다.'
         self.__hour = hour
 
     @property
@@ -217,7 +217,7 @@ class Time(SimpleTime):
             >>> t = Time(minute = 75)
             Traceback (most recent call last):
             ...
-            AssertionError: <minute>은 0-59 사이의 양의 정수여야 합니다.
+            AssertionError: <minute>은 0-59 사이의 정수여야 합니다.
             >>> t = Time(minute = 55)
             >>> t
             Time<0:55:0>
@@ -229,7 +229,7 @@ class Time(SimpleTime):
         """Setter that validates whether 'minute' is a proper representation,
         and stores minutes in the private data attribute __minute.
         """
-        assert minute >= 0 and minute < 60, '<minute>은 0-59 사이의 양의 정수여야 합니다.'
+        assert minute >= 0 and minute < 60, '<minute>은 0-59 사이의 정수여야 합니다.'
         self.__minute = minute
 
     @property
@@ -241,7 +241,7 @@ class Time(SimpleTime):
             >>> t.second = -27
             Traceback (most recent call last):
             ...
-            AssertionError: <second>은 0-59 사이의 양의 정수여야 합니다.
+            AssertionError: <second>은 0-59 사이의 정수여야 합니다.
             >>> t.second = 27
             >>> t
             Time<0:0:27>
@@ -253,7 +253,7 @@ class Time(SimpleTime):
         """Setter that validates whether 'second' is a proper representation,
         and stores seconds in the private data attribute __second.
         """
-        assert second >= 0 and second < 60, '<second>은 0-59 사이의 양의 정수여야 합니다.'
+        assert second >= 0 and second < 60, '<second>은 0-59 사이의 정수여야 합니다.'
         self.__second = second
 
     # --- 내부 조작 메소드 ------------------------------------------------------ #
@@ -530,7 +530,7 @@ def main():
     print('>>> t = Time(24, 10, 59)')
     print('Traceback (most recent call last):')
     print('...')
-    print('AssertionError: <hour>는 0-23 사이의 양의 정수여야 합니다.')
+    print('AssertionError: <hour>는 0-23 사이의 정수여야 합니다.')
     print(
         '----- All the comparison operators are implemented (==, !=, <, <=, >, >=) -----')
     print('>>> t1 = Time(0, 25, 59)')
