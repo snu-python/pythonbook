@@ -12,7 +12,7 @@ __author__ = 'Jinsoo Park'
 __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
-season = input('좋아하는 계절을 무엇인가요? ')  # input() 함수로 변수 eason에 값을 할당한다.
+season = input('좋아하는 계절을 무엇인가요? ')  # input() 함수로 변수 season에 값을 할당한다.
 print(season)                            # 변수 season을 출력한다.
 
 date = input('며칠에 태어났나요? ')       # input() 함수를 사용해 변수 date에 값을 할당한다.
