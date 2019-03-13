@@ -14,13 +14,13 @@ __email__ = 'snu.python@gmail.com'
 
 
 meal = 137.50
-tax_rate = 8.875 / 100                # 또는 tax_rate = 0.08875
-tip = 15 / 100                        # 또는 tip = 0.15
+tax_rate = 8.875 / 100                      # 또는 tax_rate = 0.08875
+tip = 15 / 100                              # 또는 tip = 0.15
 
 
-meal = meal + (meal * tax_rate)       # 또는 meal += meal * tax
+meal = meal + (meal * tax_rate)             # 또는 meal += meal * tax
 total = meal + (meal * tip)
 
-print('{}'.format(round(total, 2)))   # 또는 print('{:.2f}'.format(total))
+print('{}'.format(round(total, 2)))         # 또는 print('{:.2f}'.format(total))
 
 # !!!!! END of ex5_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

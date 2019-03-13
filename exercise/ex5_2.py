@@ -17,8 +17,7 @@ print('''President Barack Obama said,
 \tprogram it."''')
 
 print('=' * 5, '작은 따옴표로 문자열 리터럴을 만든다', '=' * 30)
-print('President Barack Obama said,\n "Don\'t ju€€st play on your phone,'
-      '\n\tprogram it."')
+print('President Barack Obama said,\n "Don\'t just play on your phone,\n\tprogram it."')
 
 print('=' * 5, '큰 따옴표로 문자열 리터럴을 만든다', '=' * 31)
 print("President Barack Obama said,\n \"Don't just play on your phone,\n\tprogram it.\"")
