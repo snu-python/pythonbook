@@ -26,7 +26,7 @@ def switch_somecase(text):
     for char in text:
         # 문자가 A', 'B', 'C', 'D', 'a', 'b', 'c', 'd' 중 하나면
         if char in switch_case:
-            # 문자 char가 소문자면 대문자로, 대문자면 소문자로 바꾼 후
+            # 문자 char가 소문자면 대문자로, 대문자면 소문자로 바꾸어
             # switched_text에 결합해 재할당한다.
             switched_text += char.swapcase()
         else:                       # 그 외 문자면
@@ -42,17 +42,16 @@ def switch_somecase2(text):
     text...: 알파벳 문자열
     Returns: 특정 대소문자를 반전한 알파벳 문자열
     """
-    switch_case = set('ABCDabcd')   # 대/소문자 반전할 문자들을 세트로 선언한다
-    switched_text = []              # 대소문자를 반전한 문자들을 담을 리스트를 초기화한다.
+    switch_case = set('ABCDabcd')       # 대/소문자 반전할 문자들을 세트로 선언한다.
+    switched_text = []                  # 대소문자를 반전한 문자들을 담을 리스트를 초기화한다.
 
     for char in text:
         # 문자가 A', 'B', 'C', 'D', 'a', 'b', 'c', 'd' 중 하나면
         if char in switch_case:
-            # 문자 char가 소문자면 대문자로, 대문자면 소문자로 바꾼 후
-            # switched_text에 결합해 재할당한다.
-            switched_text += char.swapcase()
-        else:                       # 그 외 문자이면
-            switched_text += char   # switched_text에 그대로 결합해 재할당한다.
+            # 문자 char가 소문자면 대문자로, 대문자면 소문자로 바꾸어 switched_text에 추가한다.
+            switched_text.append(char.swapcase())
+        else:                           # 그 외 문자이면
+            switched_text.append(char)  # switched_text에 그대로 추가한다.
 
     # switched_text에 있는 모든 문자열 객체를 빈칸으로 결합해서 반환한다.
     return ''.join(switched_text)
