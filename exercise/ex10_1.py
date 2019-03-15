@@ -21,7 +21,7 @@ def count_vowels(text):
     # 영어 모음(대소문자를 구분하지 않기 때문에 소문자로 이루어진 튜플)
     vowels = 'a', 'e', 'i', 'o', 'u'
 
-    count = 0                       # 영어 모음 개수를 셈하는 변수를 초기화한다.
+    count = 0                       # 영어 모음 개수를 세는 변수를 초기화한다.
 
     for char in text:
         if char.lower() in vowels:  # 추출한 문자를 소문자로 바꾼 후 영어 모음 중 하나면
@@ -32,7 +32,7 @@ def count_vowels(text):
 
 # ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
 if __name__ == '__main__':
-    test_data = 'Apples', 'I love Python'  # 테스트용 데이터를 튜플로 만든다
+    test_data = 'Apples', 'I love Python'           # 테스트용 데이터를 튜플로 만든다.
     for i in test_data:
         result = count_vowels(i)
         print('테스트 데이터.:', i)

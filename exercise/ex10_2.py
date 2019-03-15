@@ -22,13 +22,12 @@ def no_number(seq):
     nonumeric = []                      # 숫자가 아닌 자료형을 담을 리스트를 초기화한다.
 
     for i in seq:
-        if type(i) == int or type(i) == float:      # 정수나 실수이면
-            continue                                # 건너뛴다.
-        else:                                       # 정수나 실수가 아니면
-            nonumeric.append(i)                     # 리스트에 추가한다.
+        if type(i) == int or type(i) == float:          # 정수나 실수이면
+            continue                                    # 건너뛴다.
+        else:                                           # 정수나 실수가 아니면
+            nonumeric.append(i)                         # 리스트에 추가한다.
 
-    return tuple(nonumeric)                         # 튜플로 변환해서 반환한다.
-
+    return tuple(nonumeric)                             # 튜플로 변환해서 반환한다.
 
 # ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
 if __name__ == '__main__':

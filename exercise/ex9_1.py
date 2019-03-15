@@ -22,7 +22,7 @@ target = input('과일 이름을 입력하세요...: ')
 
 try:                    # target이 fruits 안에 있는지 확인한다.
     index = fruits.index(target)
-except ValueError:      # target이 fruits 안에 없으면 예외를 발생시키다.
+except ValueError:      # target이 fruits 안에 없으면 예외를 발생시킨다.
     print('과일 목록에 존재하지 않습니다.')
 else:                   # target이 fruits 안에 있다면 인덱스 번호에 1을 더해서 출력한다.
     print('과일 목록의 {}번째에 존재합니다.'.format(index + 1))
