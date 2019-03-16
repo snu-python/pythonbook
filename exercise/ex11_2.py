@@ -16,10 +16,10 @@ __email__ = 'snu.python@gmail.com'
 with open('zen.txt', mode='a', encoding='utf-8') as file:
     file.write('\n\n{} - {}'.format('Tim Peters', 'The Zen of Python'))
 
-# 수정된 파일을 다시 열어서 새줄바꿈 부호를 삭제한 각 줄을 문자열 객체로 가지는 리스트를 반환한다.
+# 수정된 파일을 다시 열어서 새줄바꿈 부호를 삭제한 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
 lines = open('zen.txt', mode='r', encoding='utf-8').read().splitlines()
 
-for line in lines :   # for문을 이용해 리스트의 각 줄을 차례로 추출해서
-    print(line)       # 출력한다.
+for line in lines :                     # for문을 이용해 리스트의 각 줄을 차례로 추출해서
+    print(line)                         # 출력한다.
 
 # !!!!! END of ex11_2.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

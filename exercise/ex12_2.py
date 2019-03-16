@@ -31,12 +31,12 @@ class Dragon:
 
         Returns: None
         """
-        self.__name = name  # 인스턴스 속성: 용의 이름
-        self.__hunger = 0  # 인스턴스 속성: 용의 배고픔 정도
-        self.__fatigability = 0  # 인스턴스 속성: 용의 피로도 정도
-        self.__hygiene = 0  # 인스턴스 속성: 용의 위생상태
-        self.__joy = 0  # 인스턴스 속성: 용의 행복지수
-        self.__affection = 0  # 인스턴스 속성: 용의 사랑지수
+        self.__name = name                          # 인스턴스 속성: 용의 이름
+        self.__hunger = 0                           # 인스턴스 속성: 용의 배고픔 정도
+        self.__fatigability = 0                     # 인스턴스 속성: 용의 피로도 정도
+        self.__hygiene = 0                          # 인스턴스 속성: 용의 위생상태
+        self.__joy = 0                              # 인스턴스 속성: 용의 행복지수
+        self.__affection = 0                        # 인스턴스 속성: 용의 사랑지수
 
     # --- 접근자 메소드 -------------------------------------------------------- #
     def name(self):
@@ -76,7 +76,7 @@ class Dragon:
         Returns: 용의 사랑(정수)"""
         return self.__affection
 
-    # --- Operation methods ----------------------------------------------
+    # --- Operation methods ------------------------------------------------- #
     def status(self):
         """용의 상태를 출력하는 메소드다.
 
