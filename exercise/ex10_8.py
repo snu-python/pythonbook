@@ -11,6 +11,7 @@ Description...: Sample solution for exercise 10-8.
                 containing strings sorted by their lengths in descending order.
 """
 __author__ = 'Jinsoo Park'
+__credits__ = '차남준'
 __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
