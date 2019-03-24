@@ -15,7 +15,7 @@ __email__ = 'snu.python@gmail.com'
 import random                 # random 모듈을 불러온다.
 
 i = 0                         # 변수 i를 정수로 선언하고 초깃값을 0으로 설정한다.
-while True:                   # 무한 루프를 순회한다.
+while True:                   # 무한 루프로 순회한다.
     i = random.randint(1, 9)  # 1~9 사이의 임의의 정수를 생성해서 i에 할당한다.
     if i <= 5:                # i가 5이하면
         print(i)              # i를 출력하고

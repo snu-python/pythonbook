@@ -17,7 +17,7 @@ sales = int(input('회사의 판매 총액은 얼마입니까? '))
 # 관리 비용을 입력받아 변수 expense에 할당한다.
 expense = int(input('회사의 관리 비용은 얼마입니까? '))
 
-operating_income = sales - expense     # 영업 이익을 계산한다(판매 총액 - 관리비용).
+operating_income = sales - expense     # 영업 이익을 계산한다(판매 총액 - 관리 비용).
 
 if operating_income >= 0:              # 영업 이익이 적자가 아니면 영업 이익을 출력한다.
     print('영업 이익은 {:,}원입니다.'.format(operating_income))
