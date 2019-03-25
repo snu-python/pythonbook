@@ -39,7 +39,7 @@ def customer_stat(dataset, job, avg_age=True):
         if d['job'] == job:     # 딕셔너리의 직업이 전달인자 job과 일치하고
             if avg_age:         # avg_age가 True면 해당 직업의 고객 나이를 추가한다.
                 result.append(int(d.get('age')))
-            else:               # avg_age가 True이면 해당 직업의 고객 통화 시간을 추가한다.
+            else:               # avg_age가 False면 해당 직업의 고객 통화 시간을 추가한다.
                 result.append(int(d.get('duration')))
 
     if avg_age:                 # avg_age가 True면 해당 직업의 고객들 평균 나이를 출력한다.
