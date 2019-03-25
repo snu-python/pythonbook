@@ -33,10 +33,10 @@ def installment(total_price, payment_amount, interest_rate):
 
 
 while True:                 # 대화형 모드에서 ex10_7을 import하면 바로 while문이 실행된다.
-    # 잘못 입력했을 때 출력하는 오류 메시지
+    # 잘못 입력했을 때 출력하는 오류 메시지다.
     msg_err = '오류 : 잘못된 숫자입니다!'
 
-    # 프로그램을 계속 진행할지 묻는 메시지
+    # 프로그램을 계속 진행할지 묻는 메시지다.
     msg_continue = '계속하시겠습니까? (1)예 (2)아니요 => '
 
     try:                                            # 모든 납입은 월말에 이행한다.

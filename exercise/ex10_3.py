@@ -20,7 +20,7 @@ def switch_somecase(text):
     text...: 알파벳 문자열
     Returns: 특정 대소문자를 반전한 알파벳 문자열
     """
-    switch_case = set('ABCDabcd')   # 대/소문자 반전할 문자들을 세트로 선언한다.
+    switch_case = set('ABCDabcd')   # 대소문자 반전할 문자들을 세트로 선언한다.
     switched_text = ''              # 대소문자를 반전한 문자열을 담을 변수를 초기화한다.
 
     for char in text:
@@ -42,7 +42,7 @@ def switch_somecase2(text):
     text...: 알파벳 문자열
     Returns: 특정 대소문자를 반전한 알파벳 문자열
     """
-    switch_case = set('ABCDabcd')       # 대/소문자 반전할 문자들을 세트로 선언한다.
+    switch_case = set('ABCDabcd')       # 대소문자 반전할 문자들을 세트로 선언한다.
     switched_text = []                  # 대소문자를 반전한 문자들을 담을 리스트를 초기화한다.
 
     for char in text:

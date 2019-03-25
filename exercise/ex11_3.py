@@ -24,7 +24,7 @@ def hours_week(dataset, country):
     for d in dataset:                           # dataset 안 딕셔너리를 차례로 추출한다.
         # 'native-country'의 매핑값이 전달인자와 같으면
         if d.get('native-country') == country:
-            # 'hours-per-week'의 매핑값을 가져와서 정수로 변환한다
+            # 'hours-per-week'의 매핑값을 가져와서 정수로 변환한다.
             hours.append(int(d.get('hours-per-week')))
     return round(sum(hours) / len(hours), 2)    # 평균을 구한 후 반올림해서 반환한다.
 

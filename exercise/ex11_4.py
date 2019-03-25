@@ -38,7 +38,7 @@ lines = open('wine_quality.csv', mode='r', encoding='utf-8').read().splitlines()
 
 wine_data = []                              # 각 행의 데이터를 담을 리스트를 초기화한다.
 
-header = [                                  # 키(key)로 사용할 열 제목을 모아둔 리스트
+header = [                                  # 키(key)로 사용할 열 제목을 모아둔 리스트다.
     'classifier', 'alcohol', 'malic acid', 'ash', 'alcalinity of ash',
     'magnesium', 'total phenols', 'flavonoids', 'nonflavanoid phenols',
     'proanthocyanins', 'color intensity', 'hue', 'OD280/OD315 of diluted wines',

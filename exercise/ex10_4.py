@@ -13,7 +13,7 @@ __email__ = 'snu.python@gmail.com'
 
 
 def search_index(seq, target):
-    """시퀀스형 객체 내에 특정 항목(객체)의 인덱스를 반환하는 함수다.
+    """시퀀스형 객체 내에 특정 객체(항목)의 인덱스를 반환하는 함수다.
 
     seq....: 검색 목록(시퀀스형)
     target.: 찾고자 하는 객체
