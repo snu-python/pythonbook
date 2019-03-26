@@ -176,7 +176,7 @@ while (True):
     elif command == '5':
         if 0 <= dragon.hygiene() < 5:
             dragon.change('hygiene')
-            print('위생상태가 감소했습니다.')
+            print('위생상태가 나빠졌습니다.')
         elif dragon.hygiene() < 0:
             print('{}는(은) 너무 깨끗해서 더 이상 씻을 필요가 없습니다.'.format(
                 dragon.name()))
