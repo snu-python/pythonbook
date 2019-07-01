@@ -13,7 +13,7 @@ __email__ = 'snu.python@gmail.com'
 
 
 commute = 30                       # 테스트를 위해 먼저 30을 commute 변수에 할당한다.
-if int(commute) >= 30:             # commute가 30 이상인 경우
+if commute >= 30:                  # commute가 30 이상인 경우
     print('대중 교통을 이용하세요!')
 else:                              # commute가 30 미만인 경우
     print('식당 근처에 사시는군요!')
