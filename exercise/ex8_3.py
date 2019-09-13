@@ -13,7 +13,7 @@ __email__ = 'snu.python@gmail.com'
 
 import math                                         # math 모듈을 불러온다.
 
-i = 0                                               # 변수 i를 정수로 선언하고 초깃값을 0으로 설정한다.
+i = 0                                               # 변수 i의 초깃값을 0으로 설정한다.
 while i < 10:                                       # i 값을 0부터 9까지 순회한다.
     print('{}! = {}'.format(i, math.factorial(i)))  # i의 계승 값을 계산해 출력한다.
     i += 1                                          # i에 1을 더한다.
