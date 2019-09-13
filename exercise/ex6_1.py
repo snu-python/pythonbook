@@ -20,8 +20,8 @@ stock.remove('논어')                  # 오래된 책을 삭재한다.
 
 new_books = ['골든아워', '바로 쓰는 파이썬']
 
-stock.extend(new_books)              # 새로운 책을 추가한다(stock += new_book과 같다).
-
+stock.extend(new_books)              # 새로운 책을 추가한다.
+                                     # stock += new_books와 같다
 stock.sort()                         # 책을 가나다 순으로 정렬한다.
 
 print('정리된 책 목록 :', stock)        # 정렬된 책을 출력한다.
