@@ -15,21 +15,36 @@ __credits__ = '이규한'
 __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
-
 # ----- Dragon 클래스 정의 ----------------------------------------------------- #
 class Dragon:
-    """용 클래스이다.
+    """용 클래스다.
 
-    속성.: __name, __hunger, __fatigability, __hygiene, __joy, __affection
-    메소드: name(), hunger(), fatigability(), hygiene(), joy(), affection()
-                 status(), change(), next_turn()
+    Attributes:
+        __name (str): 용의 이름
+        __hunger (int): 용의 배고픔 정도
+        __fatigability (int): 용의 피로도 정도
+        __hygiene (int): 용의 위생상태
+        __joy (int): 용의 행복지수
+        __affection (int): 용의 사랑지수
+    메소드:
+        __init__(self, name: str) -> None:
+        name(self) -> str:
+        hunger(self) -> int:
+        fatigability(self) -> int:
+        hygiene(self) -> int:
+        joy(self) -> int:
+        affection(self) -> int:
+        status(self) -> None:
+        change(self, target: str) -> None:
+        next_turn(self) -> None:
     """
 
     # --- 초기화 메소드 -------------------------------------------------------- #
     def __init__(self, name):
-        """용의 이름은 전달된 값으로 초기화하고 나머지 속성들은 0으로 초기화하는 메소드다.
+        """용의 이름은 전달된 값으로 초기화하고 나머지 속성들은 0으로 초기화한다.
 
-        Returns: None
+        Args:
+            name (str): 용의 이름
         """
         self.__name = name                          # 인스턴스 속성: 용의 이름
         self.__hunger = 0                           # 인스턴스 속성: 용의 배고픔 정도
@@ -40,56 +55,64 @@ class Dragon:
 
     # --- 접근자 메소드 -------------------------------------------------------- #
     def name(self):
-        """용의 이름을 반환하는 메소드다.
+        """용의 이름을 반환한다.
 
-        Returns: 용의 이름(문자열)
+        Returns:
+            str: 용의 이름
         """
         return self.__name
 
     def hunger(self):
         """용의 배고픔 정도를 반환하는 메소드다.
 
-        Returns: 용의 배고픔 정도(정수)"""
+        Returns:
+            int: 용의 배고픔 정도
+        """
         return self.__hunger
 
     def fatigability(self):
         """용의 피로도를 반환하는 메소드다.
 
-        Returns: 용의 피로도(정수)"""
+        Returns:
+            int: 용의 피로도
+        """
         return self.__fatigability
 
     def hygiene(self):
         """용의 위생상태를 반환하는 메소드다.
 
-        Returns: 용의 위생상태(정수)"""
+        Returns:
+            int: 용의 위생상태
+        """
         return self.__hygiene
 
     def joy(self):
         """용의 행복지수를 반환하는 메소드다.
 
-        Returns: 용의 행복지수(정수)"""
+        Returns:
+            int: 용의 행복지수
+        """
         return self.__joy
 
     def affection(self):
         """용의 사랑지수를 반환하는 메소드이다.
 
-        Returns: 용의 사랑(정수)"""
+        Returns:
+            int: 용의 사랑지수
+        """
         return self.__affection
 
     # --- Operation methods ------------------------------------------------- #
     def status(self):
-        """용의 상태를 출력하는 메소드다.
-
-        Returns: None
-        """
+        """용의 상태를 출력하는 메소드다."""
         print('\n[ {}의 신체 상태 ]\n배고픔 = {} | 피로도 = {} | 위생상태 = {}'.format(
             self.__name, self.__hunger, self.__fatigability, self.__hygiene))
 
     def change(self, target):
         """용의 상태를 바꾸는 메소드다.
 
-        target.: 용의 상태(문자열)
-        Returns: None
+        Args:
+            target (str): 용의 상태(hunger, fatigability, hygiene, affection, joy)
         """
         if target == 'hunger':
             self.__hunger -= 3
@@ -103,10 +126,7 @@ class Dragon:
             self.__joy = 1 if self.__joy < 0 else self.__joy + 1
 
     def next_turn(self):
-        """게임이 다음 단계로 넘어가면서 용의 전체 상태를 업데이트하는 메소드다.
-
-        Returns: None
-        """
+        """게임이 다음 단계로 넘어가면서 용의 전체 상태를 업데이트하는 메소드다."""
         self.__hunger += 1
         self.__fatigability += 1
         self.__hygiene += 1

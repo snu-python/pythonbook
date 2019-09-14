@@ -15,8 +15,11 @@ __email__ = 'snu.python@gmail.com'
 def count_vowels(text):
     """영어 단어 또는 문장에 들어 있는 모음의 개수를 반환하는 함수다.
 
-    text...: 영어 텍스트(문자열)
-    Returns: 모음 개수(정수형)
+    Args:
+        text (str): 영어 텍스트
+
+    Returns:
+        int: 모음 개수
     """
     # 영어 모음(대소문자를 구분하지 않기 때문에 소문자로 이루어진 튜플)
     vowels = 'a', 'e', 'i', 'o', 'u'
@@ -30,13 +33,12 @@ def count_vowels(text):
     return count                    # 영어 모음 개수를 반환한다.
 
 
-# ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
+# ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     test_data = 'Apples', 'I love Python'           # 테스트용 데이터를 튜플로 만든다.
     for i in test_data:
         result = count_vowels(i)
         print('테스트 데이터.:', i)
-        print('결과........:', result)
-        print()
+        print('결과........:', result, end='\n\n')
 
-# !!!!! END of ex10_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!! END of ex10_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -19,9 +19,16 @@ __email__ = 'snu.python@gmail.com'
 class Vector2D:
     """2차원 실수 평면 위의 벡터(점)를 구현한 클래스다.
 
-    속성.: __x_point, __y_point
-    메소드: distance(), dot()
-    사용법:
+    Attributes:
+        __x_point (float): x 좌표
+        __y_point (float): y 좌표
+
+    Methods:
+        __init__(self, x: float, y: float) -> None:
+        distance(self) -> float:
+        dot(self, other: Vector2D) -> float:
+
+    To use:
         >>> v1 = Vector2D('3', 4.0)
         >>> v1.distance()
         5.0
@@ -30,14 +37,18 @@ class Vector2D:
         11.0
     """
 
-    # --- 초기화 메소드 -------------------------------------------------------- #
+    # --- 초기화 메소드 --------------------------------------------------------- #
     def __init__(self, x, y):
         """인스턴스를 생성할 때 x와 y 좌표를 전달받아 초기화하는 메소드다.
 
-        x......: x 좌표(실수)
-        y......: y 좌표(실수)
-        Returns: None
-        사용법...:
+        Args:
+            x (float): x 좌표
+            y (float): y 좌표
+
+        Raises:
+           ValueError: x와 y의 값을 실수로 변환할 수 없는 경우
+
+        To use:
             >>> v1 = Vector2D('1', '2')
             >>> v2 = Vector2D(1, 2)
             >>> v3 = Vector2D(1.0, 2.0)
@@ -54,8 +65,10 @@ class Vector2D:
     def distance(self):
         """해당 벡터(점)와 원점 사이의 거리를 반환하는 메소드다.
 
-        Returns: 원점으로부터의 거리(실수)
-        사용법...:
+        Returns:
+            float: 원점으로부터의 거리
+
+        To use:
             >>> v1 = Vector2D(3, 4)
             >>> v1.distance()
             5.0
@@ -65,9 +78,13 @@ class Vector2D:
     def dot(self, other):
         """Vector2D 클래스의 다른 인스턴스와의 내적을 반환하는 메소드다.
 
-        other..: Vector2D 클래스의 인스턴스
-        Returns: 두 Vector2D 클래스 인스턴스간의 내적(실수)
-        사용법...:
+        Args:
+            other (Vector2D):  Vector2D 클래스의 인스턴스
+
+        Returns:
+            float: 두 Vector2D 클래스 인스턴스간의 내적
+
+        To use:
             >>> v1 = Vector2D(3, 4)
             >>> v2 = Vector2D(1, 2)
             >>> v2.dot(v1)
@@ -79,7 +96,7 @@ class Vector2D:
             print('ERROR: Vector2D 클래스 인스턴스가 아닙니다.')
 
 
-# ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
+# ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     print('Vector2D.__doc__')
     print(Vector2D.__doc__)             # Vector2D 클래스의 설명문자열을 출력한다.
@@ -96,4 +113,4 @@ if __name__ == '__main__':
     print("v3 = Vector2D('line', 2)")
     v3 = Vector2D('line', 2)            # Vector2D 인스턴스 v3의 좌표에 문자열이 있어 오류가 난다.
 
-# !!!!! END of ex12_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!! END of ex12_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

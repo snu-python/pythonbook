@@ -16,9 +16,12 @@ __email__ = 'snu.python@gmail.com'
 def hours_week(dataset, country):
     """평균 주당 노동시간을 구하는 함수다.
 
-    dataset: 전처리한 adult 데이터 세트(리스트)
-    country: 출신 국가(문자열)
-    Returns: 평균 주당 노동시간을 소수점 두 자리에서 반올림한 실수
+    Args:
+        dataset (list[str]): 전처리한 adult 데이터 세트
+        country (str): 출신 국가
+
+    Returns:
+        float: 평균 주당 노동시간을 소수점 두 자리에서 반올림한 실수
     """
     hours = []                                  # 주당 노동시간을 담을 리스트를 초기화한다.
     for d in dataset:                           # dataset 안 딕셔너리를 차례로 추출한다.
@@ -34,7 +37,7 @@ lines = open('adult_US.txt', encoding='utf-8').read().splitlines()
 
 adult_data = []                                 # 데이터를 담을 리스트를 초기화한다.
 
-header = [                                  # 키(key)로 사용할 열의 제목을 모아둔 리스트
+header = [                                      # 키(key)로 사용할 열의 제목을 모아둔 리스트
     'age', 'workclass', 'fnlwgt', 'education', 'education-num',
     'martal-status', 'occupation', 'relationship', 'race', 'sex',
     'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', 'salary'
@@ -51,11 +54,11 @@ for line in lines:                              # 각 줄을 차례로 하나씩
         row_dict[col_name] = row_list[header.index(col_name)]
     adult_data.append(row_dict)                 # 해당 사전을 adult_data에 추가한다.
 
-# ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------ #
+# ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     test_data = 'United-States', 'Cuba', 'Mexico'  # 테스트용 데이터를 튜플로 만든다.
     for i in test_data:
         print('{} 출신 사람들의 평균 주당 노동시간: {}'.format(i,
                                                  hours_week(adult_data, i)))
 
-# !!!!! END of ex11_3.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!! END of ex11_3.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

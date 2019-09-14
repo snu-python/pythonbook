@@ -16,24 +16,27 @@ __email__ = 'snu.python@gmail.com'
 def no_number(seq):
     """숫자가 아닌 자료형을 반환하는 함수다.
 
-    seq....: 리스트나 튜플
-    Returns: 숫자가 아닌 자료형을 담은 튜플
+    Args:
+        seq (list | tuple): 리스트나 튜플
+
+    Returns:
+        tuple: 숫자가 아닌 자료형을 담은 튜플
     """
     nonumeric = []                      # 숫자가 아닌 자료형을 담을 리스트를 초기화한다.
 
     for i in seq:
-        if type(i) == int or type(i) == float:          # 정수나 실수이면
-            continue                                    # 건너뛴다.
-        else:                                           # 정수나 실수가 아니면
-            nonumeric.append(i)                         # 리스트에 추가한다.
+        if type(i) == int or type(i) == float:  # 정수나 실수이면
+            continue                            # 건너뛴다.
+        nonumeric.append(i)                     # 정수나 실수가 아니면 리스트에 추가한다.
 
-    return tuple(nonumeric)                             # 튜플로 변환해서 반환한다.
+    return tuple(nonumeric)                     # 튜플로 변환해서 반환한다.
 
-# ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
+
+# ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     test_data = [[1], {1}, 1, '1', 'one', -3.14, {'1': 1}, 0, '2.58', (5, 9.9)]
     result = no_number(test_data)
     print('테스트 데이터.:', test_data)
     print('결과........:', result)
 
-# !!!!! END of ex10_2.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!! END of ex10_2.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

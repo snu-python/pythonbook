@@ -16,12 +16,12 @@ __email__ = 'snu.python@gmail.com'
 def customer_stat(dataset, job, avg_age=True):
     """고객의 직업에 따른 평균 나이 또는 평균 전화 지속 시간을 출력하는 함수다.
 
-    dataset: 전처리한 bank 데이터 세트(리스트)
-    job....: 고객의 직업(문자열)
-    avg_age: True이면 직업별 평균 나이(실수)를, False이면 직업별 평균 전화 통화 시간(실수)
+    Args:
+        dataset (list[str]): 전처리한 bank 데이터 세트
+        job (str): 고객의 직업
+        avg_age (bool): True이면 직업별 평균 나이를, False이면 직업별 평균 전화 통화 시간을 계산
     """
-
-    # dataset에 있는 직업군 튜플
+    # dataset에 있는 직업군 튜플을 생성한다.
     job_in_dataset = (
         'admin.', 'blue-collar', 'entrepreneur', 'housemaid', 'management',
         'retired', 'self-employed', 'services', 'student', 'technician',
@@ -67,7 +67,7 @@ for line in lines[1:]:                      # 파일의 두 번째 줄부터 차
         row_dict[col_name] = row_list[header.index(col_name)]
     bank_data.append(row_dict)              # 해당 사전을 bank_data에 추가한다
 
-# ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
+# ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     # 테스트용 튜플 데이터를 튜플로 만든다.
     test_data = ('admin.', True), ('Govern', True), ('housemaid', False)
@@ -79,4 +79,4 @@ if __name__ == '__main__':
             print(err)
         print()
 
-# !!!!! END of ex11_5.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!! END of ex11_5.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

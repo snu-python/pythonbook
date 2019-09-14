@@ -19,9 +19,13 @@ __email__ = 'snu.python@gmail.com'
 def compare_texts(text1, text2):
     """두 문장을 비교하여 중복되는 단어의 개수를 반환하는 함수다.
 
-    text1..: 첫 번째 문장이나 텍스트(문자열)
-    text2..: 두 번째 문장이나 텍스트(문자열)
-    Returns: 중복된 단어를 키로, 중복 횟수를 매핑값으로 하는 딕셔너리
+    Args:
+        text1 (str): 첫 번째 문장이나 텍스트
+        text2 (str): 두 번째 문장이나 텍스트
+
+    Returns:
+        dict[str, int]: 중복된 단어를 키로, 중복 횟수를 매핑값으로 하는 딕셔너리
+
     """
     import string           # 문장에 있는 부호들을 처리하기 위해 string 클래스를 불러온다.
 
@@ -51,7 +55,7 @@ def compare_texts(text1, text2):
     return result                                   # 결과 딕셔너리를 반환한다.
 
 
-# ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
+# ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     test_data = [
         ('apple is an apple!!!', 'this is not an apple!'),
@@ -66,7 +70,6 @@ if __name__ == '__main__':
         result = compare_texts(t1, t2)
         print('테스트 데이터 1:', t1)
         print('테스트 데이터 2:', t2)
-        print('결과........:', result)
-        print()
+        print('결과........:', result, end='\n\n')
 
 # !!!!! ex10_8.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

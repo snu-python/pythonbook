@@ -15,15 +15,18 @@ __email__ = 'snu.python@gmail.com'
 def search_index(seq, target):
     """시퀀스형 객체 내에 특정 객체(항목)의 인덱스를 반환하는 함수다.
 
-    seq....: 검색 목록(시퀀스형)
-    target.: 찾고자 하는 객체
-    Returns: 시퀀스형의 인덱스 번호(만약 특정 객체가 존재하지 않으면 -1을 반환)
+    Args:
+        seq (str | list | tuple): 검색 목록(시퀀스형)
+        target (obj): 찾고자 하는 객체
+
+    Returns:
+        int: 시퀀스형의 인덱스 번호; 만약 특정 객체가 존재하지 않으면 -1을 반환한다.
     """
     if target in seq:                   # seq 안에 target이 있으면
         return seq.index(target)        # target의 인덱스 번호를 반환한다.
     return -1                           # seq 안에 target이 없으면 -1을 반환한다.
 
-# ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #
+# ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     test_data = (   # 테스트용 데이터를 (seq, target) 형식의 튜플 쌍으로 된 튜플로 만든다.
         ('I love Python', 'p'),
@@ -34,7 +37,6 @@ if __name__ == '__main__':
         result = search_index(seq, target)
         print('테스트 데이터.:', seq)
         print('타깃........:', target)
-        print('결과........:', result)
-        print()
+        print('결과........:', result, end='\n\n')
 
-# !!!!! END of ex10_4.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!! END of ex10_4.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
