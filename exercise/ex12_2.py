@@ -26,7 +26,8 @@ class Dragon:
         __hygiene (int): 용의 위생상태
         __joy (int): 용의 행복지수
         __affection (int): 용의 사랑지수
-    메소드:
+
+    Methods:
         __init__(self, name: str) -> None:
         name(self) -> str:
         hunger(self) -> int:
@@ -153,7 +154,7 @@ print(mn_game_rule)                             # 게임 규칙을 출력한다.
 name = input('용의 이름을 입력하세요: ')              # 용의 이름을 붙여준다.
 dragon = Dragon(name)
 
-while (True):
+while True:
     dragon.status()                             # 용의 현재 상태를 표시한다.
 
     # 용이 죽을 수 있는 상태를 규정하여 용이 이 상태에 도달하면 게임을 끝낸다.
