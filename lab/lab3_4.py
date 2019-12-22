@@ -12,7 +12,7 @@ __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
 
-# input() 함수를 이용해 number 변수에 값을 할당한 후 그 값을 출력한다.
+# input() 함수를 이용해 변수 number에 값을 할당한 후 그 값을 출력한다.
 number = input('1과 10 사이의 아무 숫자를 입력하세요[1~10]: ')
 print(number)
 

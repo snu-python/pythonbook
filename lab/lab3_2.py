@@ -13,6 +13,6 @@ __email__ = 'snu.python@gmail.com'
 
 
 color = input('좋아하는 색깔이 무엇인가요? ')  # input() 함수를 이용해 변수에 값을 할당한다.
-print(color)                            # color 변수를 출력한다.
+print(color)                            # 변수 color를 출력한다.
 
 # !!!!! END of lab3_2.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

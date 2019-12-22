@@ -12,11 +12,11 @@ __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
 
-my_var = 27                # my_var 변수에 27을 할당한다.
+my_var = 27                # 변수 my_var에 27을 할당한다.
 print(my_var)              # my_var 변숫값을 출력한다.
 x = my_var / 5             # my_var을 5로 나눈 결과를 x 변수에 할당한다.
 print(x)                   # x 변숫값을 출력한다.
 my_var = 'hi'              # 문자열 'hi'를 my_var에 할당한다.
-print(my_var * 3)          # my_var 변수를 3으로 곱한 결과를 출력한다.
+print(my_var * 3)          # 변수 my_var를 3으로 곱한 결과를 출력한다.
 
 # !!!!! END of lab3_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
