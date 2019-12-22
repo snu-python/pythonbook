@@ -15,10 +15,13 @@ __email__ = 'snu.python@gmail.com'
 def cal(x, y, op='add'):
     """두 변수와 연산 명령을 입력받아 덧셈, 뺄셈, 곱셈, 나눗셈 연산을 하는 계산기 함수다.
 
-    x......: 숫자(정수 또는 실수)
-    y......: 숫자(정수 또는 실수)
-    op.....: 'add'(기본값), 'sub', 'mul', 'div'
-    Returns: 연산 결과(실수)
+    Args:
+        x (int | float): 숫자
+        y (int | float): 숫자
+        op (str): 'add'(기본값), 'sub', 'mul', 'div'
+
+    Returns:
+        float: 연산 결과
     """
     if op == 'add':
         return float(x + y)

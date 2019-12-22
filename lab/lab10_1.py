@@ -12,11 +12,13 @@ __email__ = 'snu.python@gmail.com'
 
 
 def plus(n):
-    """
-    1부터 n까지의 자연수의 합을 반환하는 함수다.
+    """1부터 n까지의 자연수의 합을 반환하는 함수다.
 
-    n......: 자연수
-    Returns: 자연수의 합
+    Args:
+        n (int): 자연수
+
+    Returns:
+        int: 자연수의 합
     """
     if n == 0:                      # 만약 n이 0이면
         return 0                    # 0를 반환한다.

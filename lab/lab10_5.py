@@ -13,12 +13,15 @@ __email__ = 'snu.python@gmail.com'
 
 
 def int_divmod(dividend, divisor):
-    """
-    두 정수를 전달받아 몫과 나머지 쌍을 반환하는 함수다.
+    """두 정수를 전달받아 몫과 나머지 쌍을 반환하는 함수다.
 
-    dividend: 피제수(정수)
-    divisor.: 제수 정수(정수)
-    Returns.: 몫, 나머지(튜플)
+    Args:
+        dividend (int): 피제수
+        divisor (int): 제수 정수
+
+    Returns:
+        tuple: 몫, 나머지
+
     """
     # dividend를 divisor로 나눈 몫과 나머지를 튜플로 반환한다.
     return dividend // divisor, dividend % divisor

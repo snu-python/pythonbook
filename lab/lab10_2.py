@@ -12,12 +12,15 @@ __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
 
-def triangle_area(base, height):    # 두 매개변수를 각각 밑변,높이로 받아서
-    """삼각형의 넓이를 구하는 함수다.
+def triangle_area(base, height):
+    """밑변과 높이를 전달받아서 삼각형의 넓이를 구하는 함수다.
 
-    base...: 밑변(숫자형)
-    height.: 높이(숫자형)
-    Returns: 삼각형의 넓이(실수)
+    Args:
+        base (int | float): 밑변
+        height (int | float): 높이
+
+    Returns:
+        float: 삼각형의 넓이
     """
     return base * height * 0.5      # 밑변 * 높이 * 1/2를 반환한다.
 

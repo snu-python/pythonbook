@@ -10,28 +10,30 @@ __author__ = 'Jinsoo Park'
 __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
-from lab12_1 import Dog                 # 반려견(Dog) 클래스를 불러온다.
+from lab12_1 import Dog
 
 class Puppy(Dog):
-    """반려견(Dog) 클래스의 하위 클래스인 강아지 클래스다."""
+    """반려견(Dog) 클래스의 하위 클래스인 강아지 클래스다.
+
+    Methods:
+         __init__(self, name: str, dog_type: str, age: int) -> None:
+         speak(self) -> None:
+    """
 
     # --- 초기화 메소드 -------------------------------------------------------- #
     def __init__(self, name, dog_type='불명', age=0):
         """Puppy 인스턴스를 초기화하는 메소드다.
 
-        name....: 반려견 이름(문자열)
-        dog_type: 반려견 종류(문자열), 기본값은 '불명'
-        age.....: 반려견 나이(정수), 기본값은 0
-        Returns.: None
+        Args:
+            name (str): 반려견 이름
+            dog_type (str): 반려견 종류, 기본값은 '불명'
+            age (int): 반려견 나이, 기본값은 0
         """
         super().__init__(name, dog_type, age)
 
     # --- 일반 메소드 ---------------------------------------------------------- #
     def speak(self):   # 반려견 메소드를 재정의한다.
-        """강아지 짖는 소리를 출력하는 메소드다.
-
-        Returns: 강아지 짓는 소리(문자열)
-        """
+        """강아지 짖는 소리를 출력하는 메소드다."""
         print(self.name(), '콩콩')  # 강아지 짖는 소리
 
 # ----- 인터프리터 모드에서 실행할 경우에만 실행됨 ------------------------------------- #

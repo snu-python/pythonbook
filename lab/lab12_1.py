@@ -14,8 +14,18 @@ __email__ = 'snu.python@gmail.com'
 class Dog:
     """반려견 클래스다.
 
-    속성.: count, __name, __dog_type, __age
-    메소드: name(), dog_type(). age(), speak()
+    Attributes:
+        count (int): 생성한 인스턴스의 개수를 담고 있는 클래스 속성
+        __name (str): 반려견 이름
+        __dog_type (str): 반려견 종류
+        __age (str): 반려견 나이
+
+    Methods:
+        __init__(self, name: str, dog_type: str, age: int) -> None:
+        name(self) -> str:
+        dog_type(self) -> str:
+        age(self) -> int:
+        speak(self) -> None:
     """
     count = 0                        # 클래스 속성 : 전체 인스턴스 수
 
@@ -23,10 +33,10 @@ class Dog:
     def __init__(self, name, dog_type='불명', age=0):
         """Dog 인스턴스를 초기화하는 메소드다.
 
-        name....: 반려견 이름(문자열)
-        dog_type: 반려견 종류(문자열), 기본값은 '불명'
-        age.....: 반려견 나이(정수), 기본값은 0
-        Returns.: None
+        Args:
+            name (str): 반려견 이름
+            dog_type (str): 반려견 종류, 기본값은 '불명'
+            age (int): 반려견 나이, 기본값은 0
         """
         self.__name = name           # 인스턴스 속성 : 반려견 이름
         self.__dog_type = dog_type   # 인스턴스 속성 : 반려견 종류
@@ -37,29 +47,29 @@ class Dog:
     def name(self):
         """반려견 이름을 반환하는 메소드다.
 
-        Returns: 반려견 이름(문자열)
+        Returns:
+            str: 반려견 이름
         """
         return self.__name
 
     def dog_type(self):
         """반려견 종류를 반환하는 메소드다.
 
-        Returns: 반려견 종류(문자열)
+        Returns:
+            str: 반려견 종류
         """
         return self.__dog_type
 
     def age(self):
         """반려견 나이를 반환하는 메소드다.
 
-        Returns: 반려견 나이(정수)
+        Returns:
+            int: 반려견 나이
         """
         return self.__age
 
     def speak(self):
-        """반려견 종류에 따라 짖는 소리를 다르게 출력하는 메소드다.
-
-        Returns: 반려견 짓는 소리(문자열)
-        """
+        """반려견 종류에 따라 짖는 소리를 다르게 출력하는 메소드다."""
         if self.__dog_type == '코코스파니엘':
             print('왈왈')
         elif self.__dog_type == '골든리트리버':

@@ -12,12 +12,16 @@ __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
 
-def stat_summary(*nums):    # 시퀀스형 패킹 연산자 *를 사용한다.
+def stat_summary(*nums):    # 한다.
     """전달인자로 입력한 임의의 정수나 실수의 기본적인 기술 통계를 반환하는 함수다.
+    매개뱐수 앞에 시퀀스형 패킹 연산자 *를 사용한다.
 
-    nums...: 쉼표로 분리된 임의의 정수 또는 실수
-    Returns: 입력한 숫자의 개수, 총합, 평균, 최댓값, 최솟값(튜플)
-    """
+    Args:
+        *nums (int, float): 쉼표로 분리된 임의의 정수 또는 실수
+
+    Returns:
+        tuple: 입력한 숫자의 개수, 총합, 평균, 최댓값, 최솟값
+    # """
     total = 0                                   # 총합을 참조할 변수를 0으로 초기화한다.
     for i in nums:
         if type(i) == int or type(i) == float:  # 전달인자가 정수나 실수면
