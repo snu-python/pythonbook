@@ -30,7 +30,7 @@ class SimpleTime:
         __init__(self, hour: int, minute: int, second: int) -> None:
         __str__(self) -> str:
         __repr__(self) -> str:
-        __eq__(self, other) ->bool:
+        __eq__(self, other) -> bool:
         seconds(self) -> int:
 
     To use:
