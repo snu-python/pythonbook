@@ -20,7 +20,7 @@ print(list3)                            # 변수 list3을 출력한다.
 del list3[-2:]                          # 리스트의 마지막 두 객체를 삭제한다.
 print(list3)                            # 변수 list3을 출력한다.
 list3[1] = '학교'                        # 리스트 두 번째 객체를 '학교'로 교체한다.
-'school' in list3                       # 리스트에 'school' 객체가 있는지 확인한다.
+print('school' in list3)                # 리스트에 'school' 객체가 있는지 확인한다.
 print(list3)                            # 변수 list3을 출력한다.
 
 # !!!!! END of lab6_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
