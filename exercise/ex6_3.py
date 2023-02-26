@@ -24,6 +24,7 @@ products['전기장판'] = 20000                                     # 신상품
 print('바뀐 물품 내역 :', products)                               # 바뀐 물품 내역을 고시한다.
 
 purchase = input('어떤 물품을 구매하실 예정인가요? ')                 # 구매할 물품을 입력받는다.
-print('{}은 {:,}원입니다'.format(purchase, products[purchase]))  # 물품의 가격을 알려준다.
+print(f'{purchase}은 {products[purchase]:,}원입니다')            # 물품의 가격을 알려준다.
+# print('{}은 {:,}원입니다'.format(purchase, products[purchase]))  # 물품의 가격을 알려준다.
 
 # !!!!! END of ex6_3.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
