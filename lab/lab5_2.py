@@ -11,10 +11,10 @@ __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
 
-x = True                                 # 변수 x에 True 값을 할당한다.
-y = False                                # 변수 y에 True 값을 할당한다.
-print(x == y)                            # x와 y가 같은 값인지 확인한다.
-print(x > y)                             # x가 y보다 큰 값인지 확인한다.
-print(x <= y)                            # x가 y보다 작거나 같은 값인지 확인한다.
+x = True       # 변수 x에 True 값을 할당한다.
+y = False      # 변수 y에 True 값을 할당한다.
+print(x == y)  # x와 y가 같은 값인지 확인한다.
+print(x > y)   # x가 y보다 큰 값인지 확인한다.
+print(x <= y)  # x가 y보다 작거나 같은 값인지 확인한다.
 
 # !!!!! END of lab5_2.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

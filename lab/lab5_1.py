@@ -11,9 +11,9 @@ __version__ = '0.1'
 __email__ = 'snu.python@gmail.com'
 
 
-x = True                              # 변수 x에 True 값을 할당한다.
-y = False                             # 변수 y에 False 값을 할당한다.
-type(x)                               # 변수 x의 자료형을 확인한다.
-type(y)                               # 변수 y의 자료형을 확인한다.
+x = True   # 변수 x에 True 값을 할당한다.
+y = False  # 변수 y에 False 값을 할당한다.
+type(x)    # 변수 x의 자료형을 확인한다.
+type(y)    # 변수 y의 자료형을 확인한다.
 
 # !!!!! END of lab5_1.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
