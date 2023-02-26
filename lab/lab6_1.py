@@ -13,7 +13,7 @@ __email__ = 'snu.python@gmail.com'
 
 list1 = [-3.13, 'school', [1, 2, 3]]    # [] 연산자로 리스트를 생성한다.
 print(list1)                            # 변수 list1을 출력한다.
-list2 = list('가나다')                    # list() 생성자로 리스트를 생성한다.
+list2 = list('가나다')                    # list 생성자로 리스트를 생성한다.
 print(list2)                            # 변수 list2를 출력한다.
 list3 = list1 + list2                   # 결합연산자 +로 두 리스트를 결합한다.
 print(list3)                            # 변수 list3을 출력한다.
