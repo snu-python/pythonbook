@@ -8,7 +8,7 @@ Description...: Sample solution for exercise 8-3.
                 same result with for statement can be found in exercise 8-4.
 """
 __author__ = 'Jinsoo Park'
-__version__ = '0.1'
+__version__ = '0.11'
 __email__ = 'snu.python@gmail.com'
 
 import math                               # math 모듈을 불러온다.
