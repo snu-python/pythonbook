@@ -66,8 +66,8 @@ def switch_somecase2(text):
 # ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
     test_string = 'I am Python. I am not anaconda!!!'
-    result = switch_somecase('I am Python. I am not anaconda!!!')
+    result = switch_somecase(test_string)
     print('테스트 데이터.:', test_string)
-    print('결과........:', result)
+    print('결과.......:', result)
 
 # !!!!! END of ex10_3.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

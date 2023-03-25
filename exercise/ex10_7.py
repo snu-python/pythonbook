@@ -12,7 +12,7 @@ Description...: Sample solution for exercise 10-7.
 """
 __author__ = 'Jinsoo Park'
 __credits__ = ['이규한']
-__version__ = '0.1'
+__version__ = '0.11'
 __email__ = 'snu.python@gmail.com'
 
 
@@ -30,7 +30,7 @@ def installment(total_price, payment_amount, interest_rate):
         total_price = total_price * (1 + interest_rate) - payment_amount
         month += 1
     else:
-        print('{} 개월'.format(month))
+        print(f'{month} 개월')
 
 
 while True:  # 대화형 모드에서 ex10_7을 import하면 바로 while문이 실행된다.
