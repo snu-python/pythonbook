@@ -37,11 +37,11 @@ lines = open('adult_US.txt', encoding='utf-8').read().splitlines()
 
 adult_data = []                                 # 데이터를 담을 리스트를 초기화한다.
 
-header = [                                      # 키(key)로 사용할 열의 제목을 모아둔 리스트
+header = (                                      # 키(key)로 사용할 열의 제목을 모아둔 튜플
     'age', 'workclass', 'fnlwgt', 'education', 'education-num',
     'martal-status', 'occupation', 'relationship', 'race', 'sex',
     'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', 'salary'
-]
+)
 
 for line in lines:                              # 각 줄을 차례로 하나씩 추출하여
     row_list = line.split(',')                  # 줄마다 ',' 기준으로 분할한다.
@@ -58,7 +58,6 @@ for line in lines:                              # 각 줄을 차례로 하나씩
 if __name__ == '__main__':
     test_data = 'United-States', 'Cuba', 'Mexico'  # 테스트용 데이터를 튜플로 만든다.
     for i in test_data:
-        print('{} 출신 사람들의 평균 주당 노동시간: {}'.format(i,
-                                                 hours_week(adult_data, i)))
+        print(f'{i} 출신 사람들의 평균 주당 노동시간: {hours_week(adult_data, i)}')
 
 # !!!!! END of ex11_3.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

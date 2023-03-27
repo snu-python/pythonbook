@@ -32,23 +32,20 @@ def customer_stat(dataset, job, avg_age=True):
     if job not in job_in_dataset:
         raise ValueError('데이터 셋에 없는 직업입니다')
 
-    result = []                 # 나이 또는 전화 통화 시간을 담을 리스트를 초기화한다.
+    result = []  # 나이 또는 전화 통화 시간을 담을 리스트를 초기화한다.
 
     # 전달인자 job이 해당 직업에 있다면 dataset 안 딕셔너리를 차례로 추출한다.
     for d in dataset:
-        if d['job'] == job:     # 딕셔너리의 직업이 전달인자 job과 일치하고
-            if avg_age:         # avg_age가 True면 해당 직업의 고객 나이를 추가한다.
+        if d['job'] == job:  # 딕셔너리의 직업이 전달인자 job과 일치하고
+            if avg_age:      # avg_age가 True면 해당 직업의 고객 나이를 추가한다.
                 result.append(int(d.get('age')))
-            else:               # avg_age가 False면 해당 직업의 고객 통화 시간을 추가한다.
+            else:            # avg_age가 False면 해당 직업의 고객 통화 시간을 추가한다.
                 result.append(int(d.get('duration')))
 
-    if avg_age:                 # avg_age가 True면 해당 직업의 고객들 평균 나이를 출력한다.
-        print('{} 직업의 평균 나이: {:,.2f}'.format(job,
-                                             sum(result) / len(result)))
-    else:                        # avg_age가 False면 해당 직업의 고객들 평균 나이를 출력한다.
-        print('{} 직업의 평균 통화 시간: {:,.2f}'.format(job,
-                                                sum(result) / len(result)))
-
+    if avg_age:  # avg_age가 True면 해당 직업의 고객들 평균 나이를 출력한다.
+        print(f'{job} 직업의 평균 나이: {sum(result) / len(result):,.2f}')
+    else:        # avg_age가 False면 해당 직업의 고객들 평균 나이를 출력한다.
+        print(f'{job} 직업의 평균 통화 시간: {sum(result) / len(result):,.2f}')
 
 # bank.csv 파일을 열어 파일 안 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
 lines = open('bank.csv', mode='r', encoding='utf-8').read().splitlines()
@@ -72,7 +69,7 @@ if __name__ == '__main__':
     # 테스트용 튜플 데이터를 튜플로 만든다.
     test_data = ('admin.', True), ('Govern', True), ('housemaid', False)
     for i, j in test_data:
-        print('테스트 전달인자: job = {}, avg_age = {}'.format(i, j))
+        print(f'테스트 전달인자: job = {i}, avg_age = {j}')
         try:
             customer_stat(bank_data, i, j)
         except ValueError as err:
