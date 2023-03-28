@@ -35,24 +35,26 @@ def hours_week(dataset, country):
 # adult_US.txt 파일을 열어 파일 안 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
 lines = open('adult_US.txt', encoding='utf-8').read().splitlines()
 
-adult_data = []                                 # 데이터를 담을 리스트를 초기화한다.
+adult_data = []  # 데이터를 담을 리스트를 초기화한다.
 
-header = (                                      # 키(key)로 사용할 열의 제목을 모아둔 튜플
+header = (       # 키(key)로 사용할 열의 제목을 모아둔 튜플
     'age', 'workclass', 'fnlwgt', 'education', 'education-num',
     'martal-status', 'occupation', 'relationship', 'race', 'sex',
     'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', 'salary'
 )
 
-for line in lines:                              # 각 줄을 차례로 하나씩 추출하여
-    row_list = line.split(',')                  # 줄마다 ',' 기준으로 분할한다.
-    for index, item in enumerate(row_list):     # 그 항목들을 하나씩 추출하여
-        row_list[index] = item.strip()          # 앞뒤 공백을 제거한다.
+for line in lines:                           # 각 줄을 차례로 하나씩 추출하여
+    if not line:                             # 값이 없으면 for 문을 빠져 나온다.
+        break
+    row_list = line.split(',')               # 줄마다 ',' 기준으로 분할한다.
+    for index, item in enumerate(row_list):  # 그 항목들을 하나씩 추출하여
+        row_list[index] = item.strip()       # 앞뒤 공백을 제거한다.
 
-    row_dict = {}                               # 각 줄의 정보를 담을 딕셔너리를 초기화한다.
-    for col_name in header:                     # header의 키를 하나씩 꺼낸다.
+    row_dict = {}                            # 각 줄의 정보를 담을 딕셔너리를 초기화한다.
+    for col_name in header:                  # header의 키를 하나씩 꺼낸다.
         # 키와 매핑값을 row_dict로 저장한다.
         row_dict[col_name] = row_list[header.index(col_name)]
-    adult_data.append(row_dict)                 # 해당 사전을 adult_data에 추가한다.
+    adult_data.append(row_dict)              # 해당 사전을 adult_data에 추가한다.
 
 # ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
