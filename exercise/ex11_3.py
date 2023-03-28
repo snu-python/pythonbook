@@ -17,7 +17,7 @@ def hours_week(dataset, country):
     """평균 주당 노동시간을 구하는 함수다.
 
     Args:
-        dataset (list[str]): 전처리한 adult 데이터 세트
+        dataset (list[dict]): 전처리한 adult 데이터 세트
         country (str): 출신 국가
 
     Returns:
