@@ -26,7 +26,7 @@ def installment(total_price, payment_amount, interest_rate):
         interest_rate (float): 이자율
     """
     month = 0
-    while (total_price > 0):
+    while total_price > 0:
         total_price = total_price * (1 + interest_rate) - payment_amount
         month += 1
     else:
