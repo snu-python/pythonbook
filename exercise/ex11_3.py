@@ -54,7 +54,8 @@ for line in lines:                           # 각 줄을 차례로 하나씩 �
     for col_name in header:                  # header의 키를 하나씩 꺼낸다.
         # 키와 매핑값을 row_dict로 저장한다.
         row_dict[col_name] = row_list[header.index(col_name)]
-    adult_data.append(row_dict)              # 해당 사전을 adult_data에 추가한다.
+    else:
+        adult_data.append(row_dict)          # 해당 사전을 adult_data에 추가한다.
 
 # ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
