@@ -36,17 +36,16 @@ def wines(dataset, alcohol, flavonoid):
         print('오류입니다. 정수나 실수를 입력하세요!')   # 오류 메시지를 출력한다.
 
 
-# wine_quality.csv 파일을 열어 파일 안 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
-lines = open('wine_quality.csv', mode='r', encoding='utf-8').read().splitlines()
-
 wine_data = []   # 각 행의 데이터를 담을 리스트를 초기화한다.
-
 header = (       # 키(key)로 사용할 열 제목을 모아둔 튜플
     'classifier', 'alcohol', 'malic acid', 'ash', 'alcalinity of ash',
     'magnesium', 'total phenols', 'flavonoids', 'nonflavanoid phenols',
     'proanthocyanins', 'color intensity', 'hue', 'OD280/OD315 of diluted wines',
     'proline'
 )
+
+# wine_quality.csv 파일을 열어 파일 안 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
+lines = open('wine_quality.csv', mode='r', encoding='utf-8').read().splitlines()
 
 for line in lines:                          # 행을 차례로 하나씩 추출하여
     row_list = line.split(',')              # 해당 줄을 ',' 기준으로 분할한다.

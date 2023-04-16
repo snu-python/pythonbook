@@ -47,10 +47,10 @@ def customer_stat(dataset, job, avg_age=True):
     else:        # avg_age가 False면 해당 직업의 고객들 평균 나이를 출력한다.
         print(f'{job} 직업의 평균 통화 시간: {sum(result) / len(result):,.2f}')
 
+bank_data = []   # 각 행의 데이터를 담을 리스트를 초기화한다.
+
 # bank.csv 파일을 열어 파일 안 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
 lines = open('bank.csv', mode='r', encoding='utf-8').read().splitlines()
-
-bank_data = []   # 각 행의 데이터를 담을 리스트를 초기화한다.
 
 # 파일 첫 번째 줄 값에서 양 끝의 큰따옴표를 제거한 후 키(key)로 사용할 열 제목을 리스트에 할당한다.
 header = lines[0].replace('"', '').split(';')

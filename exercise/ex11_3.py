@@ -32,9 +32,6 @@ def hours_week(dataset, country):
     return round(sum(hours) / len(hours), 2)    # 평균을 구한 후 반올림해서 반환한다.
 
 
-# adult_US.txt 파일을 열어 파일 안 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
-lines = open('adult_US.txt', encoding='utf-8').read().splitlines()
-
 adult_data = []  # 데이터를 담을 리스트를 초기화한다.
 
 header = (       # 키(key)로 사용할 열의 제목을 모아둔 튜플
@@ -42,6 +39,9 @@ header = (       # 키(key)로 사용할 열의 제목을 모아둔 튜플
     'martal-status', 'occupation', 'relationship', 'race', 'sex',
     'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', 'salary'
 )
+
+# adult_US.txt 파일을 열어 파일 안 각 줄을 문자열 객체로 갖는 리스트를 반환한다.
+lines = open('adult_US.txt', encoding='utf-8').read().splitlines()
 
 for line in lines:                           # 각 줄을 차례로 하나씩 추출하여
     if not line:                             # 값이 없으면 for 문을 빠져 나온다.
