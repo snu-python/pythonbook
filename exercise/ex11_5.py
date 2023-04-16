@@ -21,8 +21,7 @@ def customer_stat(dataset, job, avg_age=True):
         job (str): 고객의 직업
         avg_age (bool): True이면 직업별 평균 나이를, False이면 직업별 평균 전화 통화 시간을 계산
     """
-    # dataset에 있는 직업군 튜플을 생성한다.
-    jobs = (
+    jobs = (  # dataset에 있는 직업군 튜플을 생성한다.
         'admin.', 'blue-collar', 'entrepreneur', 'housemaid', 'management',
         'retired', 'self-employed', 'services', 'student', 'technician',
         'unemployed', 'unknown'
