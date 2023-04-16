@@ -49,12 +49,12 @@ lines = open('wine_quality.csv', mode='r', encoding='utf-8').read().splitlines()
 
 for line in lines:                          # 행을 차례로 하나씩 추출하여
     row_list = line.split(',')              # 해당 줄을 ',' 기준으로 분할한다.
-
     row_dict = {}                           # 각 줄의 정보를 담을 딕셔너리를 초기화한다.
     for col_name in header:                 # header의 키를 하나씩 추출한다.
         # 키와 실수형을 변환한 매핑값을 row_dict로 저장한다.
         row_dict[col_name] = float(row_list[header.index(col_name)])
-    wine_data.append(row_dict)              # 해당 딕셔너리를 wine_data에 추가한다.
+    else:
+        wine_data.append(row_dict)          # 해당 딕셔너리를 wine_data에 추가한다.
 
 # ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
