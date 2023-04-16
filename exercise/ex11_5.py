@@ -60,7 +60,7 @@ for line in lines[1:]:       # 파일의 두 번째 줄부터 차례로 하나�
     for col_name in header:  # header의 키 값을 하나씩 추출하여
         row_dict[col_name] = row_list[header.index(col_name)]  # 키와 매핑값을 row_dict로 저장한다.
     else:
-        bank_data.append(row_dict)  # 해당 사전을 bank_data에 추가한다.
+        bank_data.append(row_dict)  # 해당 딕셔너리를 bank_data에 추가한다.
 
 # ----- 인터프리터 모드에서 실행할 경우에만 실행된다 ------------------------------------ #
 if __name__ == '__main__':
